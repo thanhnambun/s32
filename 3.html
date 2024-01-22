@@ -7,20 +7,18 @@
 </head>
 <body>
     <script>
-        let phoneBook={
-            contact :
-                {
-                    name:"Alice",
-                    phone:"123564",
-                    email:"alice@email.com",
-                    disPlayInfo: function () {
-                        console.log(this.name);
-                        console.log(this.phone);
-                        console.log(this.email);
-                    }
-                },
+        let n = prompt("nhap so luong sinh vien")
+        let students =[]
+        for (let i = 0; i < n; i++) {
+            var student={
+                name :"",
+                id :"",
+            }
+            student.name=prompt("nhap ten hoc sinh ")
+            student.id=prompt("nhap id hoc sinh")
+            students.push(student)
         }
-        phoneBook.contact.disPlayInfo();
+        console.log(students);
     </script>
 </body>
 </html>

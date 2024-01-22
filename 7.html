@@ -7,7 +7,47 @@
 </head>
 <body>
     <script>
-        
+        let users = [];
+        function validateEmail(email) {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return emailRegex.test(email);
+        }
+        function validateUserData(id, username, email, password) {
+            if (!username || !email || !password) {
+                return false; 
+            }
+            if (username.length < 3) {
+                return false;
+            }
+            if (!validateEmail(email)) {
+                return false;
+            if (password.length < 8) {
+                return false;
+            }
+            return true;
+            }
+        }
+        function createUser(id, username, email, password) {
+            let user = {
+                id: id,
+                username: username,
+                email: email,
+                password: password
+            };
+            users.push(user);
+            console.log("User created:", user);
+        }
+        let id = 1;
+        let username = prompt("Nhập tên người dùng:");
+        let email = prompt("Nhập địa chỉ email:");
+        let password = prompt("Nhập mật khẩu:");
+        while (!validateUserData(id, username, email, password)) {
+            alert("Dữ liệu không hợp lệ. Vui lòng nhập lại.");
+            username = prompt("Nhập tên người dùng:");
+            email = prompt("Nhập địa chỉ email:");
+            password = prompt("Nhập mật khẩu:");
+        }
+        createUser(id, username, email, password);
     </script>
 </body>
 </html>

@@ -7,20 +7,16 @@
 </head>
 <body>
     <script>
-        let nguoi={
-            name:"nam",
-            age:"19",
-            addres:"Nam Dinh",
+        let person ={
+            id:"" ,
+            name : "",
+            phone:  "",
+            address: "",
         }
-        console.log(nguoi);
-        let x = nguoi =>{
-            nguoi.age = nguoi.date
-            delete nguoi.age
-        }
-        x(nguoi)
-        console.log(nguoi);
-        nguoi.date="26"
-        console.log(nguoi);
+    person.id =prompt("nhap id")
+    person.name=prompt("nhap ten")
+    person.phone=prompt("nhap so dien thoai")
+    person.address=("nhap dia chi")
     </script>
 </body>
 </html>

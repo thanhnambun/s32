@@ -7,27 +7,19 @@
 </head>
 <body>
     <script>
-        let phoneBook={
-            contact :[
-                {
-                    name:"Alice",
-                    phone:"123564",
-                    email:"alice@email.com",
-                },
-                {
-                    name:"Bob",
-                    phone:"12364",
-                    email:"Bob@email.com",
-                }    
-            ]
+        let information ={
+            id:"1" ,
+            name : "nam",
+            phone:  "032",
+            address: "Nam Dinh",
         }
-        for (let i = 0; i < phoneBook.contact.length; i++) {
-            let contacts = phoneBook.contact[i];
-            console.log("Tên: " + contacts.name);
-            console.log("Số điện thoại: " + contacts.phone);
-            console.log("Email: " + contacts.email);
-            console.log("----------------------");
+        let x = information =>{
+            information.address = information.email
+            delete information.address
         }
+        information.email = "123@email.com"
+        x(information)
+        console.log(information);
     </script>
 </body>
 </html>
